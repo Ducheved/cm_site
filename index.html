@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+<div style="position:fixed;top:50px;left:50px;color:black;z-index:-999;" id="callbacksDiv"></div>
 
 
 
@@ -39,7 +39,7 @@
           </span>
         </div>
         <div id="navbarMenuHeroC" class="navbar-menu">
-          <div class="navbar-end">
+          <div class="navbar-end" id="navEnd">
             <a class="navbar-item">
               <div class="line">Мероприятия</div>
             </a>
@@ -69,13 +69,13 @@
   <!-- Hero content: will be in the middle -->
 
 <div id="fullpage">
-    <div class="section hero" id="section0">
-        <div class="hero-body">
+    <div class="section fp-auto-height hero" id="section0">
+        <div class="hero-body is-resize">
             <div class="container">
-                <h1 class="title is-size-1">
+                <h1 class="title is-size-3">
                 Изобретательность - наше кредо
                 </h1>
-                <h2 class="subtitle">
+                <h2 class="subtitle is-size-6">
                 Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
 Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
 when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
@@ -84,11 +84,9 @@ essentially unchanged. It was popularised in the 1960s with the release of Letra
                 </h2>
              </div>
         </div>
-        
         <div class="gear slide1"></div>
-        
     </div>
-    <div class="section hero is-bold" id="section1">
+    <div class="section hero is-shadows is-bold" id="section1">
         <div class="slide">
         <div class="hero-body">
             <div class="container">
@@ -235,17 +233,19 @@ essentially unchanged. It was popularised in the 1960s with the release of Letra
     }
 
     //fullpage initialisation
-
+    var myButton = document.getElementById("navEnd");
     var myFullpage = new fullpage('#fullpage', {
-        sectionsColor: ['#f4f2f3', '#f4f2f3', '#ecf0f1', '#e1e7e9', '#2f2f38', '#292933'],
+        sectionsColor: ['#ecf0f1', '#f4f2f3', '#ecf0f1', '#e1e7e9', '#2f2f38', '#292933'],
         anchors: ['home', 'calc', 'work', 'rent', 'team', 'support'],
         slidesNavigation: true,
         css3: true,
         navigation:true,
+        navigationPosition: 'right',
         navigationTooltips: ['Главная', 'Калькулятор', 'Как мы работаем', 'Аренда', 'Команда', 'Консультация'],
         showActiveTooltip: true,
         menu: '#menu',
-        scrollOverflow: true,
+        verticalCentered: true,
+        scrollOverflow: false,
         easingcss3: 'cubic-bezier(0.175, 0.0885, 0.320, 1.275)',
         onLeave: function(origin, destination, direction){
             var params = {
@@ -259,10 +259,14 @@ essentially unchanged. It was popularised in the 1960s with the release of Letra
                 document.getElementById('callbacksDiv').innerHTML = '';
             }
 
-            addToLog('onLeave', params);
+            addToLog('onLeave блять', params);
 
             console.log("--- onLeave ---");
             console.log(params);
+           
+                myButton.classList.remove(origin.anchor);
+                 myButton.classList.add(destination.anchor);
+            
         },
         onSlideLeave: function(section, origin, destination, direction){
             var params = {
@@ -281,10 +285,13 @@ essentially unchanged. It was popularised in the 1960s with the release of Letra
 
             console.log("--- onSlideLeave ---");
             console.log(params);
+            
+            
         },
         afterRender: function(){
             addToLog('afterRender', {});
             console.log("afterRender");
+           
         },
         afterResize: function(width, height){
             addToLog('afterResize', {
@@ -322,8 +329,8 @@ essentially unchanged. It was popularised in the 1960s with the release of Letra
             console.log("--- afterLoad ---");
             console.log(params);
             console.log('===============');
-
             deleteLog = true;
+            
         }
     });
 

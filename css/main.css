@@ -1,6 +1,5 @@
 @CHARSET "ISO-8859-1";
-/* Reset CSS
- * --------------------------------------- */
+
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
@@ -16,7 +15,13 @@ form,fieldset,input,textarea,p,blockquote,th,td {
     background-repeat: no-repeat;
 }
 
+.is-resize{
+    height: 65vh;
+}
 
+.is-shadows {
+     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
 .slide1 {
     background-image:url("../img/gear6.svg");
     width: 164rem;
@@ -24,8 +29,8 @@ form,fieldset,input,textarea,p,blockquote,th,td {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    right: -11rem;
-    top: 24rem;
+    right: -12rem;
+    top: 12rem;
 }
 
 .slide2 {
@@ -118,6 +123,40 @@ border-color: #82589f;
     
 }
 
+.navbar-end.support > a.navbar-item:hover {
+    color: rgb(245, 202, 92);
+    border-color: #82589f;
+}
+
+.navbar-end.team > a.navbar-item:hover {
+    color: rgb(245, 202, 92);
+    border-color: #82589f;
+}
+
+.navbar-end.support > .navbar-item {
+    color: rgb(245, 202, 92);
+}
+
+.navbar-end.team > .navbar-item {
+    color: rgb(245, 202, 92);
+}
+
+.navbar-end.support > .navbar-item >.line {
+    border-color: rgb(245, 202, 92);
+}
+
+.navbar-end.team > .navbar-item > .line {
+    border-color: rgb(245, 202, 92);
+}
+
+.navbar-end.support > .navbar-item >.line:hover {
+    border-color: #82589f;
+}
+
+.navbar-end.team > .navbar-item > .line:hover {
+   border-color: #82589f;
+}
+
 .fp-controlArrow {
     top: auto !important;
         bottom: 36px; 
@@ -126,8 +165,6 @@ border-color: #82589f;
 .fp-slidesNav {
         position:inherit;
 }
-/* Custom CSS
- * --------------------------------------- */
 
 .wrap{
 	margin-left: auto;
