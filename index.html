@@ -216,26 +216,6 @@ essentially unchanged. It was popularised in the 1960s with the release of Letra
 <script type="text/javascript" src="js/easings.min.js"></script>
 <script type="text/javascript" src="js/examples.js"></script>
 <script type="text/javascript">
-    var deleteLog = false;
-
-    //adding the params info into the page
-    function addToLog(callbackName, params){
-        var callbackData = '<h4>' + callbackName + '</h4>';
-        Object.keys(params).forEach(function(key){
-            var content =  params[key];
-
-            if(content !== null && typeof content === 'object'){
-                content = JSON.stringify(content);
-            }
-            callbackData += '<p><b>' + key + '</b>: ' + content + '</p>';
-        });
-        callbackData += '<br />';
-
-        document.getElementById('callbacksDiv').innerHTML += callbackData;
-    }
-
-    //fullpage initialisation
-
     var myFullpage = new fullpage('#fullpage', {
         sectionsColor: ['#f4f2f3', '#f4f2f3', '#ecf0f1', '#e1e7e9', '#2f2f38', '#292933'],
         anchors: ['home', 'calc', 'work', 'rent', 'team', 'support'],
@@ -245,88 +225,9 @@ essentially unchanged. It was popularised in the 1960s with the release of Letra
         navigationTooltips: ['Главная', 'Калькулятор', 'Как мы работаем', 'Аренда', 'Команда', 'Консультация'],
         showActiveTooltip: true,
         menu: '#menu',
-        scrollOverflow: true,
-        easingcss3: 'cubic-bezier(0.175, 0.0885, 0.320, 1.275)',
-        onLeave: function(origin, destination, direction){
-            var params = {
-                origin: origin,
-                destination:destination,
-                direction: direction
-            };
-
-            //clearing the logging in the screen
-            if(deleteLog){
-                document.getElementById('callbacksDiv').innerHTML = '';
-            }
-
-            addToLog('onLeave', params);
-
-            console.log("--- onLeave ---");
-            console.log(params);
-        },
-        onSlideLeave: function(section, origin, destination, direction){
-            var params = {
-                section: section,
-                origin: origin,
-                destination: destination,
-                direction: direction
-            };
-
-            //clearing the logging in the screen
-            if(deleteLog){
-                document.getElementById('callbacksDiv').innerHTML = '';
-            }
-
-            addToLog('onSlideLeave', params);
-
-            console.log("--- onSlideLeave ---");
-            console.log(params);
-        },
-        afterRender: function(){
-            addToLog('afterRender', {});
-            console.log("afterRender");
-        },
-        afterResize: function(width, height){
-            addToLog('afterResize', {
-                width: width,
-                height: height
-            });
-
-            console.log("afterResize");
-            console.log(params);
-        },
-        afterSlideLoad: function(section, origin, destination, direction){
-            var params = {
-                section: section,
-                origin: origin,
-                destination: destination,
-                direction: direction
-            };
-
-            addToLog('afterSlideLoad', params);
-
-            console.log("--- afterSlideLoad ---");
-            console.log(params);
-            console.log("----------------");
-
-            deleteLog = true;
-        },
-        afterLoad: function(origin, destination, direction){
-            var params = {
-                origin: origin,
-                destination: destination,
-                direction: direction
-            };
-            addToLog('afterLoad', params);
-
-            console.log("--- afterLoad ---");
-            console.log(params);
-            console.log('===============');
-
-            deleteLog = true;
-        }
-    });
-        
+        scrollOverflow: false,
+        easingcss3: 'cubic-bezier(0.175, 0.0885, 0.320, 1.275)'
+    });     
 </script>
 
 </body>
