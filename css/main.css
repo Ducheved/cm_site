@@ -1,0 +1,206 @@
+@CHARSET "ISO-8859-1";
+/* Reset CSS
+ * --------------------------------------- */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.logo{
+    background-image:url("../img/logo.svg");
+    width: 17rem;
+    height: 8rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
+.slide1 {
+    background-image:url("../img/gear6.svg");
+    width: 164rem;
+    height: 87rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -11rem;
+    top: 24rem;
+}
+
+.slide2 {
+    background-image:url("../img/gear2.svg");
+    width: 97rem;
+    height: 87rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -13rem;
+    top: 32rem;
+}
+
+.slide3 {
+    background-image:url("../img/gear3.svg");
+    width: 97rem;
+    height: 87rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -13rem;
+    top: 32rem;
+}
+
+.slide4 {
+    background-image:url("../img/gear4.svg");
+    width: 97rem;
+    height: 87rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    right: -13rem;
+    top: 32rem;
+}
+
+.slide5 {
+    background-image:url("../img/gear5.svg");
+    width: 80rem;
+    height: 89rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -10rem;
+    top: 32rem;
+}
+
+
+.line {
+    border-bottom: 2px solid;
+    border-bottom-color: currentcolor;
+border-color: #7a7a7a9e;
+}
+
+.line:hover {
+    border-bottom: 2px solid;
+    border-bottom-color: currentcolor;
+border-bottom-color: currentcolor;
+border-color: #82589f;
+    color: #82589f;
+}
+
+.hero.is-light .navbar-link.is-active, .hero.is-light .navbar-link:hover, .hero.is-light a.navbar-item.is-active, .hero.is-light a.navbar-item:hover {
+    background-color: #e8e8e800 !important;
+}
+
+.button.is-success.is-inverted {
+    color: #82589f !important;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: #82589f !important;
+}
+.fp-controlArrow.fp-prev {
+    left: 25px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #82589f transparent transparent;
+}
+
+.fp-controlArrow.fp-next {
+    right: 25px;
+    border-color: transparent transparent  transparent #82589f;
+}
+
+#fp-nav ul li .fp-tooltip {
+    top: -8px !important;
+    color: #82589f  !important;
+    font-size: 18px !important;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.fp-controlArrow {
+    top: auto !important;
+        bottom: 36px; 
+}
+
+.fp-slidesNav {
+        position:inherit;
+}
+/* Custom CSS
+ * --------------------------------------- */
+
+.wrap{
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+	position: relative;
+}
+.hero.is-fullheight {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#section4 {
+    background-image: url("../img/slide_photo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+        
+}
+
+#section5 {
+    background-image: url("../img/slide_photo_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+        
+}
+
+#menu li {
+	display:inline-block;
+	margin: 10px;
+	color: #000;
+	background:#fff;
+	background: rgba(255,255,255, 0.5);
+	-webkit-border-radius: 10px;
+            border-radius: 10px;
+}
+#menu li.active{
+	background:#666;
+	background: rgba(0,0,0, 0.5);
+	color: #fff;
+}
+#menu li a{
+	text-decoration:none;
+	color: #000;
+}
+#menu li.active a:hover{
+	color: #000;
+}
+#menu li:hover{
+	background: rgba(255,255,255, 0.8);
+}
+#menu li a,
+#menu li.active a{
+	padding: 9px 18px;
+	display:block;
+}
+#menu li.active a{
+	color: #fff;
+}
+#menu{
+	position:fixed;
+	top:0;
+	left:0;
+	height: 40px;
+	z-index: 70;
+	width: 100%;
+	padding: 0;
+	margin:0;
+}
+
+
+
+
+

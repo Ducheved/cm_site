@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ConventionMachine</title>
+    <meta name="author" content="Alvaro Trigo Lopez" />
+    <meta name="description" content="fullPage callback function." />
+    <meta name="keywords"  content="fullpage,jquery,demo,callback,function,event" />
+    <meta name="Resource-type" content="Document" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+
+<div style="position:fixed;top:50px;left:50px;color:white;z-index:999;" id="callbacksDiv"></div>
+
+
+
+	
+
+<section class="hero is-light is-fullheight">
+  <!-- Hero head: will stick at the top -->
+  <div class="hero-head">
+    <header class="navbar is-fixed-top">
+      <div class="container">
+        <div class="navbar-brand">
+          <a class="navbar-item ">
+              <div class="logo" alt="Logo"></div>
+          </a>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroC">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroC" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item">
+              <div class="line">Мероприятия</div>
+            </a>
+            <a class="navbar-item">
+              <div class="line">Аренда</div>
+            </a>
+            <a class="navbar-item">
+              <div class="line">О нас</div>
+            </a>
+            <a class="navbar-item">
+              <div class="line">Контакты</div>
+            </a>
+            <span class="navbar-item">
+              <a class="button is-success is-inverted">
+                <span class="icon">
+                  <i class="fab fa-vk"></i>
+                </span>
+                <span>Группа</span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Hero content: will be in the middle -->
+
+<div id="fullpage">
+    <div class="section hero" id="section0">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1">
+                Изобретательность - наше кредо
+                </h1>
+                <h2 class="subtitle">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
+essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+                </h2>
+             </div>
+        </div>
+        
+        <div class="gear slide1"></div>
+        
+    </div>
+    <div class="section hero is-bold" id="section1">
+        <div class="slide">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1">
+                Изобретательность - наше кредо
+                </h1>
+                <h2 class="subtitle">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
+essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+                </h2>
+             </div>
+        </div>
+        </div>
+        <div class="slide">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1">
+                Изобретательность - наше кредо
+                </h1>
+                <h2 class="subtitle">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
+essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+                </h2>
+             </div>
+        </div>
+        </div>
+        <div class="slide">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title is-size-1">
+                Изобретательность - наше кредо
+                </h1>
+                <h2 class="subtitle">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+It has survived not only five centuries, but also the leap into electronic typesetting, remaining 
+essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+                </h2>
+             </div>
+        </div>
+        </div>
+    </div>
+    <div class="section hero is-bold" id="section2">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                Work
+                </h1>
+                <h2 class="subtitle">
+                Primary bold subtitle
+                </h2>
+             </div>
+        </div>
+        <div class="gear slide2"></div>
+    </div>
+    <div class="section hero is-bold" id="section3">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                Rent
+                </h1>
+                <h2 class="subtitle">
+                Primary bold subtitle
+                </h2>
+             </div>
+        </div>
+        <div class="gear slide4"></div>
+    </div>
+    <div class="section hero is-dark is-bold" id="section4">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                Team
+                </h1>
+                <h2 class="subtitle">
+                Primary bold subtitle
+                </h2>
+             </div>
+        </div>
+        <div class="gear slide3"></div>
+    </div>
+    <div class="section hero is-dark is-bold" id="section5">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                Бесплатная консультация
+                </h1>
+                <h2 class="subtitle">
+                Primary bold subtitle
+                </h2>
+             </div>
+        </div>
+        <div class="gear slide5"></div>
+    </div>
+</div>
+
+  <!-- Hero footer: will stick at the bottom -->
+  <div class="hero-foot">
+    <nav class="tabs is-boxed is-fullwidth">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Overview</a></li>
+          <li><a>Modifiers</a></li>
+          <li><a>Grid</a></li>
+          <li><a>Elements</a></li>
+          <li><a>Components</a></li>
+          <li><a>Layout</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+</section>
+	
+<script type="text/javascript" src="js/fullpage.extensions.min.js"></script>
+<script type="text/javascript" src="js/fullpage.min.js"></script>
+<script type="text/javascript" src="js/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="js/easings.min.js"></script>
+<script type="text/javascript" src="js/examples.js"></script>
+<script type="text/javascript">
+    var deleteLog = false;
+
+    //adding the params info into the page
+    function addToLog(callbackName, params){
+        var callbackData = '<h4>' + callbackName + '</h4>';
+        Object.keys(params).forEach(function(key){
+            var content =  params[key];
+
+            if(content !== null && typeof content === 'object'){
+                content = JSON.stringify(content);
+            }
+            callbackData += '<p><b>' + key + '</b>: ' + content + '</p>';
+        });
+        callbackData += '<br />';
+
+        document.getElementById('callbacksDiv').innerHTML += callbackData;
+    }
+
+    //fullpage initialisation
+
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#f4f2f3', '#f4f2f3', '#ecf0f1', '#e1e7e9', '#2f2f38', '#292933'],
+        anchors: ['home', 'calc', 'work', 'rent', 'team', 'support'],
+        slidesNavigation: true,
+        css3: true,
+        navigation:true,
+        navigationTooltips: ['Главная', 'Калькулятор', 'Как мы работаем', 'Аренда', 'Команда', 'Консультация'],
+        showActiveTooltip: true,
+        menu: '#menu',
+        scrollOverflow: true,
+        easingcss3: 'cubic-bezier(0.175, 0.0885, 0.320, 1.275)',
+        onLeave: function(origin, destination, direction){
+            var params = {
+                origin: origin,
+                destination:destination,
+                direction: direction
+            };
+
+            //clearing the logging in the screen
+            if(deleteLog){
+                document.getElementById('callbacksDiv').innerHTML = '';
+            }
+
+            addToLog('onLeave', params);
+
+            console.log("--- onLeave ---");
+            console.log(params);
+        },
+        onSlideLeave: function(section, origin, destination, direction){
+            var params = {
+                section: section,
+                origin: origin,
+                destination: destination,
+                direction: direction
+            };
+
+            //clearing the logging in the screen
+            if(deleteLog){
+                document.getElementById('callbacksDiv').innerHTML = '';
+            }
+
+            addToLog('onSlideLeave', params);
+
+            console.log("--- onSlideLeave ---");
+            console.log(params);
+        },
+        afterRender: function(){
+            addToLog('afterRender', {});
+            console.log("afterRender");
+        },
+        afterResize: function(width, height){
+            addToLog('afterResize', {
+                width: width,
+                height: height
+            });
+
+            console.log("afterResize");
+            console.log(params);
+        },
+        afterSlideLoad: function(section, origin, destination, direction){
+            var params = {
+                section: section,
+                origin: origin,
+                destination: destination,
+                direction: direction
+            };
+
+            addToLog('afterSlideLoad', params);
+
+            console.log("--- afterSlideLoad ---");
+            console.log(params);
+            console.log("----------------");
+
+            deleteLog = true;
+        },
+        afterLoad: function(origin, destination, direction){
+            var params = {
+                origin: origin,
+                destination: destination,
+                direction: direction
+            };
+            addToLog('afterLoad', params);
+
+            console.log("--- afterLoad ---");
+            console.log(params);
+            console.log('===============');
+
+            deleteLog = true;
+        }
+    });
+        
+</script>
+
+</body>
+</html>
+1:07 06.07.2020
