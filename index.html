@@ -10,18 +10,15 @@
     <meta name="Resource-type" content="Document" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" type="text/css" href="css/fullpage.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/parallax.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script> 
 </head>
 <body>
 
 <div style="position:fixed;top:50px;left:50px;color:black;z-index:-999;" id="callbacksDiv"></div>
-
-
-
-	
 
 <section class="hero is-light is-fullheight">
   <!-- Hero head: will stick at the top -->
@@ -83,6 +80,7 @@
              </div>
         </div>
         <div class="gear slide1"></div>
+
     </div>
     <div class="section hero is-shadows is-bold" id="section1">
         <div class="slide">
@@ -160,17 +158,13 @@
         </div>
     </div>
     <div class="section hero is-bold" id="section2">
-        <div class="hero-body">
-            <div class="container">
-                <h1 class="title is-size-3">
-                Как мы работаем?
-                </h1>
-                <h2 class="subtitle is-size-6">
-                Крутая схема от начала до конца. 
-                </h2>
-             </div>
+        <div id="scene_2">
+          <div data-depth=".40" data-depth-y="1.30" data-depth-x="1.30">
+              <div class="wraping">
+              <div class="game"></div>
+            </div>  
+          </div>
         </div>
-        <div class="gear slide2"></div>
     </div>
     <div class="section hero is-bold" id="section3">
         <div class="hero-body">
@@ -208,6 +202,9 @@
         <div class="gear slide3"></div>
     </div>
     <div class="section hero is-dark is-bold" id="section5">
+        <div id="scene_1">
+          <div data-depth="0.40" data-depth-y="-0.30"><div class="paralax_g5"></div></div>
+        </div>
         <div class="hero-body">
             <div class="container">
                 <h1 class="title is-size-3">
@@ -221,7 +218,6 @@
                 </h2>
              </div>
         </div>
-        <div class="gear slide5"></div>
     </div>
 </div>
 
@@ -249,8 +245,13 @@
 <script type="text/javascript" src="js/easings.min.js"></script>
 <script type="text/javascript" src="js/examples.js"></script>
 <script type="text/javascript">
-    var deleteLog = false;
-
+    var scene = document.getElementById('scene_1');
+    var parallaxInstance = new Parallax(scene);
+    
+    var scene_2 = document.getElementById('scene_2');
+    var parallaxInstance = new Parallax(scene_2);
+    
+    var deleteLog = true;
     //adding the params info into the page
     function addToLog(callbackName, params){
         var callbackData = '<h4>' + callbackName + '</h4>';
@@ -281,7 +282,7 @@
         menu: '#menu',
         verticalCentered: true,
         scrollOverflow: false,
-        easingcss3: 'cubic-bezier(0.175, 0.0885, 0.320, 1.275)',
+        //easingcss3: 'cubic-bezier(0.175, 0.0885, 0.320, 1.275)',
         onLeave: function(origin, destination, direction){
             var params = {
                 origin: origin,

@@ -78,6 +78,31 @@ form,fieldset,input,textarea,p,blockquote,th,td {
 }
 
 
+
+
+.wraping{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	position: relative;
+}
+
+.wraping::after {
+  content: '';
+  display: block;
+  padding-top: 100%; /*установите ваши пропорции, в данном случае квадрат*/
+}
+.game {
+    position: absolute;
+    background-image:url("../img/game_final_2.svg");
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 .line {
     border-bottom: 2px solid;
     border-bottom-color: currentcolor;

@@ -1,0 +1,20 @@
+#scene_1 {
+    position: absolute !important;
+}
+
+#scene {
+    position: absolute !important;
+}
+
+#scene_right_1 {
+    position: absolute !important;
+    right: 0;
+}
+
+.paralax_g5 {
+    background-image: url(../img/gear5.svg);
+    width: 80rem;
+    height: 89rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
